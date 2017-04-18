@@ -1,0 +1,36 @@
+body {
+
+  header#navbar {
+    position: fixed !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 10em !important;
+    padding-right: 5em !important;
+    z-index: 12 !important;
+    margin-top: 0 !important;
+    background: @merobazar-black !important;
+    div.container {
+      a {
+        color: white;
+      }
+      a.active {
+        color: @merobazar-black !important;
+        background: @merobazar-gray !important;
+      }
+      a:hover {
+        color: @merobazar-black !important;
+        background: @merobazar-gray !important;
+      }
+      nav {
+        float: right;
+
+        ul.dropdown-menu {
+          background: @merobazar-black !important;
+        }
+      }
+    }
+  }
+  div.main-container {
+    padding-top: 7em;
+  }
+}
