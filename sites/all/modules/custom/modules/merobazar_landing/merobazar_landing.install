@@ -1,0 +1,6 @@
+<?php
+/**
+ * Implements hook_install().
+ */
+function merobazar_landing_install() {
+}

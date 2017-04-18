@@ -1,0 +1,7 @@
+name = Merobazar Landing Module
+description = Merobazar Landing module to configure the landing page
+package = "Merobazar"
+
+core = 7.x
+
+

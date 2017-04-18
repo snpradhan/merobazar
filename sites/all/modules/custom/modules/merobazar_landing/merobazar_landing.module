@@ -1,0 +1,65 @@
+<?php
+/**
+ * @file
+ * Merobazar Landing Module
+ *
+ * @category Module
+ * @package  Merobazar
+ * @author   Sachin Pradhan
+ */
+
+
+
+function merobazar_landing_block_info() {
+  $blocks[0] = array(
+    'info' => t('Search'),
+  );
+  $blocks[1] = array(
+    'info' => t('Trending Listings'),
+  );
+  return $blocks;
+}
+
+function merobazar_landing_block_view($delta='') {
+  $block = array();
+  switch ($delta) {
+    case 0:
+      $block['subject'] = t('');
+      $block['content'] = merobazar_landing_search();
+      break;
+    case 1:
+      $block['subject'] = t('Trending Listings');
+      $block['content'] = merobazar_landing_trending_listings();
+      break;
+  }
+  return $block;
+}
+
+function merobazar_landing_search(){
+  $content = array(
+      '#type' => 'container',
+      '#attributes' => array('class' => array('row')),
+      'content' => array(
+        '#type' => 'markup',
+        '#markup' => '<h2>Whether you&rsquo;re new to teaching life science or you&rsquo;re a pro looking for more training, we can help you "think outside the kit." </h2>
+          <p class="callout">Our professional development workshops, provided at no cost to teachers, give you the chance to try out great lab activities with the help of academic and industry professionals. </p>',
+      ),
+    );
+  return $content;
+}
+
+function merobazar_landing_trending_listings(){
+  $content = array(
+    '#type' => 'container',
+    '#attributes' => array('class' => array('row')),
+    'content' => array(
+      '#type' => 'markup',
+      '#markup' => '<h2>Whats up </h2>'
+    ),
+  );
+  return $content;
+}
+
+
+
+?>
